@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Travel Connect - Login</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-image: url('../img/login-bg.jpg'); /* Update the path if necessary */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            color: white;
+        }
+        .login-section {
+            margin: 100px auto;
+            width: 300px;
+            padding: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 10px;
+            background-color: white;
+        }
+        .login-section h2 {
+            margin-bottom: 20px;
+            color: black;
+        }
+        .login-section input {
+            width: 80%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        .login-section button {
+            width: 50%;
+            padding: 10px;
+            margin-top: 30px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .login-section button:hover {
+            background-color: #0056b3;
+        }
+        p {
+            margin-top: 20px;
+            color: black;
+        }
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <a href="home.html">
+        <img src="../img/home-logo.png" alt="Home Logo" style="width: 50px; height: auto; position: absolute; left: 20px; top: 20px;">
+    </a>
+    <main>
+        <h1>Welcome to Travel Connect</h1>
+        <div class="login-section">
+            <h2>Login</h2>
+            <!-- Updated form to use JavaScript for redirect -->
+            <form onsubmit="return redirectToDashboard()">
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+            <p>Don't have an account? <a href="register.html">Register here</a></p>
+            <p><a href="forgot-password.html">Forgot Password?</a></p>
+        </div>
+    </main>
+
+    <script>
+        // JavaScript function to handle redirection after login
+        function redirectToDashboard() {
+            window.location.href = "dashboard.html"; // Redirect to dashboard
+            return false;  // Prevent form from actually submitting
+        }
+    </script>
+</body>
+</html>
